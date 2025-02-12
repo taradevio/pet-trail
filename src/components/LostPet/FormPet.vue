@@ -136,7 +136,6 @@ function submit() {
             localStorage.setItem("pet_details", JSON.stringify(arr));
         }, 100);
         alert("we'll keep our fingers crossed!");
-        window.location.reload();
     }
 }
 </script>

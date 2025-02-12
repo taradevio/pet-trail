@@ -213,8 +213,7 @@ function submit() {
                         v-model="pet_details.add_details" rows="7" cols="45"></textarea>
                 </div>
                 <button @click="submit"
-                    class="py-2 px-4 border-2 mt-3 cursor-pointer bg-[#3B82F6] text-[#FFFFFF] hover:bg-[#1E60D6] rounded-md"
-                    type="button">
+                    class="py-2 px-4 border-2 mt-3 cursor-pointer bg-[#3B82F6] text-[#FFFFFF] hover:bg-[#1E60D6] rounded-md">
                     Submit
                 </button>
             </form>

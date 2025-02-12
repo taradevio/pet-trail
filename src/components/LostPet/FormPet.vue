@@ -1,6 +1,9 @@
 <script setup>
 import { onMounted, reactive } from "vue";
 import L from 'leaflet'
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 onMounted(() => {
     const map = L.map("map").setView([0.7893, 113.9213], 14);
@@ -136,6 +139,7 @@ function submit() {
             localStorage.setItem("pet_details", JSON.stringify(arr));
         }, 100);
         alert("we'll keep our fingers crossed!");
+        router.push('/foundpet')
     }
 }
 </script>
@@ -144,7 +148,7 @@ function submit() {
     <section class="mt-3 bg-[#FAFAFA]">
         <div class="md:grid place-content-center ps-3 pe-3">
             <h1 class="text-center text-4xl font-bold text-[#2D2D2D]">Report Your Lost Pet</h1>
-            <form class="my-3 ">
+            <form @submit.prevent class="my-3 ">
                 <div class="mb-3">
                     <label name="email" class="text-lg font-medium text-[#2D2D2D]">Email</label><br />
                     <input type="email" name="email" class="border-[#D1D5DB] border-2 py-2 pl-2 w-full" id="email"
